@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/base.css" rel="stylesheet">
+    <link href="style/blocs.css" rel="stylesheet">
+    <link href="style/home.css" rel="stylesheet">
+    <link href="style/parcours.css" rel="stylesheet">
+    <link href="style/projets.css" rel="stylesheet">
+    <link href="style/profil.css" rel="stylesheet">
+    <link href="style/skills.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <script src="js/skill.js" defer></script>
+    <script src="js/carouselle .js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#projets">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <i class="fa-solid fa-bars icon-menu" onclick="toggleMenu()"></i>
+    
+    <div class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#skill">Skills</a></li>
+            <li><a href="#projets">Projets</a></li>
+        </ul>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+<main>
+    <section id="home">
+        <div class="home-content">
+            <div class="name-container">
+                <h1>DJELIDI</h1>
+                <h1>Khephren</h1>
+            </div>
+            <div class="background-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+                <div class="shape shape-6"></div>
+                <div class="shape shape-7"></div>
+                <div class="shape shape-8"></div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Découvrez moi !</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <header>
+    </header>
+
+
+    <section id="profil">
+        <h2>Qui suis-je ?</h2>
+        <div class="profil-card">
+            <div class="profil-image">
+                <img src="assets/profil.jpg" alt="Photo de profil">
+            </div>
+            <div class="profil-content">
+                <p>Je m'appelle DJELIDI Khephren et je suis un étudiant de BUT Informatique. Actuellement en seconde année à l'IUT de Marne-la-Vallée, je souhaite grâce a ce portfolio vous présenter mes compétences et mes projets.</p>
+            </div>
+            <a href="annexe/cv.pdf" target="_blank" class="cv-button">curriculum vitae</a>
+        </div>
+    </section>
+
+    <section id="parcours">
+        <h2>Parcours</h2>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="education-card">
+                    <div class="icon-container">
+                        <img src="assets/parcours1.svg" alt="Diplôme" class="education-icon">
+                    </div>
+                    <div class="education-content">
+                        <h3>Lycée polyvalent Diderot </h3>
+                        <p>Obtention du bac STI2D spécialité SIN avec mention assez bien.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="icon-container">
+                        <img src="assets/parcours2.svg" alt="Diplôme" class="education-icon">
+                    </div>
+                    <div class="education-content">
+                        <h3>IUT de Marne-la-Vallée</h3>
+                        <p>En seconde année de BUT Informatique avec l'obtention du BUT prévu pour 2026.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="icon-container">
+                        <img src="assets/parcours3.svg" alt="Diplôme" class="education-icon">
+                    </div>
+                    <div class="education-content">
+                        <h3>Le futur</h3>
+                        <p>Après mon BUT, je souhaite continuer si possible mes études en école d'ingénieur informatique ou en master informatique.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-control prev">&lt;</button>
+                <button class="carousel-control next">&gt;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="skill">
+        <h2>Compétences</h2>
+        <div class="skills-container">
+            <div class="skill-group">
+                <div class="web-skill">
+                    <div class="skill-circle">
+                        <i class="fas fa-globe skill-icon"></i>
+                        <p>WEB</p>
+                    </div>
+                    <div class="sub-skill" id="soft-1">
+                        <div class="sub-skill-circle">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <span>HTML</span>
+                    </div>
+                    <div class="sub-skill" id="soft-2">
+                        <div class="sub-skill-circle">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <span>CSS</span>
+                    </div>
+                    <div class="sub-skill" id="soft-3">
+                        <div class="sub-skill-circle">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <span>React</span>
+                    </div>
+                    <div class="sub-skill" id="soft-4">
+                        <div class="sub-skill-circle">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="dev-skill">
+                    <div class="skill-circle">
+                        <i class="fas fa-code skill-icon"></i>
+                        <p>DEVELOPPEMENT</p>
+                    </div>
+                    <div class="sub-skill" id="dev-1">
+                        <div class="sub-skill-circle">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <span>Python</span>
+                    </div>
+                    <div class="sub-skill" id="dev-2">
+                        <div class="sub-skill-circle">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <span>Java</span>
+                    </div>
+                    <div class="sub-skill" id="dev-3">
+                        <div class="sub-skill-circle">
+                            <i class="fas fa-copyright"></i>
+                        </div>
+                        <span>C</span>
+                    </div>
+                    <div class="sub-skill" id="dev-4">
+                        <div class="sub-skill-circle">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <span>Bash</span>
+                    </div>
+                    <div class="sub-skill" id="dev-5">
+                        <div class="sub-skill-circle">
+                            <i class="fab fa-android"></i>
+                        </div>
+                        <span>Android Studio</span>
+                    </div>
+                </div>
+
+                <div class="db-skill">
+                    <div class="skill-circle">
+                        <i class="fas fa-database skill-icon"></i>
+                        <p>BDD</p>
+                    </div>
+                    <div class="sub-skill" id="db-1">
+                        <div class="sub-skill-circle">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="sub-skill" id="db-2">
+                        <div class="sub-skill-circle">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="sub-skill" id="db-3">
+                        <div class="sub-skill-circle">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="other-skill">
+                    <div class="skill-circle">
+                        <i class="fas fa-tools skill-icon"></i>
+                        <p>AUTRE</p>
+                    </div>
+                    <div class="sub-skill" id="other-1">
+                        <div class="sub-skill-circle">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <span>Suite Office</span>
+                    </div>
+                    <div class="sub-skill" id="other-2">
+                        <div class="sub-skill-circle">
+                            <i class="fab fa-figma"></i>
+                        </div>
+                        <span>Figma</span>
+                    </div>
+                    <div class="sub-skill" id="other-3">
+                        <div class="sub-skill-circle">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span>Gantt</span>
+                    </div>
+                    <div class="sub-skill" id="other-4">
+                        <div class="sub-skill-circle">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span>Esprit d'équipe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bloc">
+        <h2>Blocs</h2>
+        <div class="bloc-container">
+            <div class="circle-selector">
+                <div class="circle circle-1 active" data-bloc="1"></div>
+                <div class="circle circle-2" data-bloc="2"></div>
+                <div class="circle circle-3" data-bloc="3"></div>
+                <div class="circle circle-4" data-bloc="4"></div>
+                <div class="circle circle-5" data-bloc="5"></div>
+                <div class="circle circle-6" data-bloc="6"></div>
+            </div>
+            <div class="bloc-content">
+                <div class="bloc bloc-1 active">
+                    <h3>Réaliser</h3>
+                    <div class="bloc-section">
+                        <h4>Situations professionnelles</h4>
+                        <ul>
+                            <li>Élaborer une application informatique</li>
+                            <li>Faire évoluer une application informatique</li>
+                            <li>Maintenir en conditions opérationnelles une application informatique</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Compétences développées</h4>
+                        <ul>
+                            <li>CE1.01 | En respectant les besoins décrits par le client</li>
+                            <li>CE1.03 | En appliquant les principes algorithmiques</li>
+                            <li>CE1.04 | En veillant à la qualité du code et à sa documentation</li>
+                            <li>CE1.06 | En choisissant les ressources techniques appropriées</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Projet en lien</h4>
+                        <a href="#popup-1" class="en-savoir-plus">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="bloc bloc-2">
+                    <h3>Optimiser</h3>
+                    <div class="bloc-section">
+                        <h4>Situations professionnelles</h4>
+                        <ul>
+                            <li>Proposer des applications informatiques optimisées en fonction de critères spécifiques : temps d'exécution, précision, consommation de ressources</li>
+                            <li>Améliorer les performances des programmes dans des contextes contraints</li>
+                            <li>Mettre en place des applications informatiques adaptées et efficaces</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Compétences développées</h4>
+                        <ul>
+                            <li>CE2.01 | En formalisant et modélisant des situations complexes</li>
+                            <li>CE2.02 | En recensant les algorithmes et les structures de données usuels</li>
+                            <li>CE2.03 | En s'appuyant sur des schémas de raisonnement</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Projet en lien</h4>
+                        <a href="#popup-2" class="en-savoir-plus">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="bloc bloc-3">
+                    <h3>Administrer</h3>
+                    <div class="bloc-section">
+                        <h4>Situations professionnelles</h4>
+                        <ul>
+                            <li>Installer, configurer, mettre à disposition, maintenir en conditions opérationnelles des infrastructures, des services et des réseaux et optimiser le système informatique d'une organisation</li>
+                            <li>Déployer une nouvelle architecture technique</li>
+                            <li>Améliorer une infrastructure existante</li>
+                            <li>Sécuriser les applications et les services</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Compétences développées</h4>
+                        <ul>
+                            <li>CE3.01 | En sécurisant le système d'information</li>
+                            <li>CE3.03 | En appliquant les normes en vigueur et les bonnes pratiques architecturales et de sécurité</li>
+                            <li>CE3.02 | En offrant une qualité de service optimale</li>
+                            <li>CE3.04 | En assurant la continuité d'activité</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Projet en lien</h4>
+                        <a href="#popup-3" class="en-savoir-plus">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="bloc bloc-4">
+                    <h3>Gérer</h3>
+                    <div class="bloc-section">
+                        <h4>Situations professionnelles</h4>
+                        <ul>
+                            <li>Concevoir, gérer, administrer et exploiter les données de l'entreprise et mettre à disposition toutes les informations pour un bon pilotage de l'entreprise</li>
+                            <li>Lancer un nouveau projet</li>
+                            <li>Sécuriser des données</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Compétences développées</h4>
+                        <ul>
+                            <li>CE4.01 | En respectant les réglementations sur le respect de la vie privée et la protection des données personnelles</li>
+                            <li>CE4.02 | En respectant les enjeux économiques, sociétaux et écologiques de l'utilisation du stockage de données, ainsi que les différentes infrastructures (data centers, cloud, etc.)</li>
+                            <li>CE4.05 | En assurant la cohérence et la qualité</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Projet en lien</h4>
+                        <a href="#popup-4" class="en-savoir-plus">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="bloc bloc-5">
+                    <h3>Conduire</h3>
+                    <div class="bloc-section">
+                        <h4>Situations professionnelles</h4>
+                        <ul>
+                            <li>Satisfaire les besoins des utilisateurs au regard de la chaîne de valeur du client, organiser et piloter un projet informatique avec des méthodes classiques ou agiles</li>
+                            <li>Lancer un nouveau projet</li>
+                            <li>Piloter le maintien d'un projet en condition opérationnelle</li>
+                            <li>Faire évoluer un système d'information</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Compétences développées</h4>
+                        <ul>
+                            <li>CE5.04 | En adoptant une démarche proactive, créative et critique</li>
+                            <li>CE5.02 | En respectant les règles juridiques et les normes en vigueur</li>
+                            <li>CE5.01 | En communiquant efficacement avec les différents acteurs d'un projet</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Projet en lien</h4>
+                        <a href="#popup-5" class="en-savoir-plus">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="bloc bloc-6">
+                    <h3>Collaborer</h3>
+                    <div class="bloc-section">
+                        <h4>Situations professionnelles</h4>
+                        <ul>
+                            <li>Acquérir, développer et exploiter les aptitudes nécessaires pour travailler efficacement dans une équipe informatique</li>
+                            <li>Lancer un nouveau projet</li>
+                            <li>Organiser son travail en relation avec celui de son équipe</li>
+                            <li>Élaborer, gérer et transmettre de l'information</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Compétences développées</h4>
+                        <ul>
+                            <li>CE6.01 | En inscrivant sa démarche au sein d'une équipe pluridisciplinaire</li>
+                            <li>CE6.02 | En accompagnant la mise en œuvre des évolutions informatiques</li>
+                            <li>CE6.04 | En développant une communication efficace et collaborative</li>
+                        </ul>
+                    </div>
+                    <div class="bloc-section">
+                        <h4>Projet en lien</h4>
+                        <a href="#popup-6" class="en-savoir-plus">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popups pour chaque bloc -->
+    <div class="popup-overlay" id="popup-1">
+        <div class="popup-content">
+            <a href="#bloc" class="popup-close">&times;</a>
+            <div class="popup-text">
+                <h3>Bloc 1 - Réaliser</h3>
+                <p>Dans le cadre du projet "Bankai", nous avons développé une application de gestion bancaire en suivant une démarche agile. Nous avons élaboré et implémenté les fonctionnalités demandées par le Product Owner, telles que l'export de PDF et l'affichage de graphiques.</p>
+            </div>
+            <img src="assets/projet3.png" class="popup-image">
+            <div class="popup-text">
+                <p>Nous avons appliqué des principes d'ergonomie et d'accessibilité pour rendre l'application intuitive et facile à utiliser. L'interface a été pensée pour être claire, avec une navigation fluide et accessible à tous.</p>
+            </div>
+            <img src="assets/bankai2.png" class="popup-image">
+            <div class="popup-text">
+                <p>Pour garantir une bonne conception, nous avons adopté des pratiques de développement rigoureuses. Un dossier de conception a été réalisé afin de documenter notre code et d'assurer sa lisibilité et sa maintenabilité.</p>
+            </div>
+            <img src="assets/bankai3.png" class="popup-image">
+            <div class="popup-text">
+                <p>Enfin, nous avons validé la qualité de l'application à travers un cahier de tests. Nous avons effectué des tests unitaires et fonctionnels pour détecter et corriger d'éventuels problèmes, garantissant ainsi un produit fiable.</p>
+            </div>
+            <img src="assets/bankai4.png" class="popup-image">
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-2">
+        <div class="popup-content">
+            <a href="#bloc" class="popup-close">&times;</a>
+            <div class="popup-text">
+                <h3>Bloc 2 - Optimiser</h3>
+                <p>Dans le projet Travia, nous avons dû choisir les structures de données les plus adaptées pour gérer efficacement les informations du système. Ce choix était crucial pour optimiser les performances et garantir une organisation claire des données.</p>
+            </div>
+            <img src="assets/travia1.png" class="popup-image">
+            <div class="popup-text">
+                <p>Pour résoudre le problème de recherche de trajets entre les planètes, nous avons utilisé l'algorithme A*. Cette approche nous a permis d'optimiser les trajets en trouvant les parcours les plus courts et les plus efficaces, tout en garantissant une exécution rapide.</p>
+            </div>
+            <img src="assets/travia2.png" class="popup-image">
+            <div class="popup-text">
+                <p>Nous avons également mis en place des mesures de sécurité pour protéger les données stockées en base. Cela nous a permis de comprendre les enjeux liés à la sécurisation des informations et d'appliquer des bonnes pratiques pour éviter les vulnérabilités.</p>
+            </div>
+            <img src="assets/travia3.png" class="popup-image">
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-3">
+        <div class="popup-content">
+            <a href="#bloc" class="popup-close">&times;</a>
+            <div class="popup-text">
+                <h3>Bloc 3 - Administrer</h3>
+                <p>Tout au long de l'année, nous avons réalisé plusieurs TP réseaux, où nous avons conçu et développé des applications communicantes. Ces exercices nous ont permis de mieux comprendre les interactions entre les différents systèmes et la gestion des connexions.</p>
+            </div>
+            <img src="assets/tp_reseau.png" class="popup-image">
+            <div class="popup-text">
+                <p>Pour certains projets, nous avons dû héberger nos propres serveurs en local en utilisant Apache. Nous avons ainsi appris à configurer et administrer des serveurs et des services réseau virtualisés.</p>
+            </div>
+            <img src="assets/xampp.png" class="popup-image">
+            <div class="popup-text">
+                <p>Enfin, nous avons mis en place des mesures de sécurité pour protéger les services et les données. Cela nous a permis de mieux comprendre les risques liés aux systèmes connectés et d'appliquer des bonnes pratiques pour sécuriser nos infrastructures.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-4">
+        <div class="popup-content">
+            <a href="#bloc" class="popup-close">&times;</a>
+            <div class="popup-text">
+                <h3>Bloc 4 - Gérer</h3>
+                <p>Cette année, nous avons travaillé sur différents modèles de bases de données, notamment SQL et NoSQL, afin d'optimiser les structures utilisées en entreprise. Nous avons appliqué ces concepts dans divers projets, dont un système de réservation de billets de train.</p>
+            </div>
+            <img src="assets/mongodb.png" class="popup-image">
+            <div class="popup-text">
+                <p>Pour garantir la sécurité des données, nous avons mis en place des mesures assurant leur intégrité et confidentialité, en sécurisant les accès et en protégeant les informations sensibles.</p>
+            </div>
+            <img src="assets/atlas.png" class="popup-image">
+            <div class="popup-text">
+                <p>Nous avons également organisé la restitution des données à travers des interfaces programmées, permettant une exploitation claire et efficace des informations stockées.</p>
+            </div>
+            <img src="assets/mongoose.png" class="popup-image">
+            <div class="popup-text">
+                <p>Enfin, nous avons manipulé des données hétérogènes, issues de différentes sources et formats, afin d'adapter notre système aux besoins variés d'une application en entreprise.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-5">
+        <div class="popup-content">
+            <a href="#bloc" class="popup-close">&times;</a>
+            <div class="popup-text">
+                <h3>Bloc 5 - Conduire</h3>
+                <p>Cette année, nous avons également travaillé sur la gestion de projet et le management, en utilisant des outils comme Gantt, les diagrammes de PERT, les tableaux RACI et les WBS pour mieux comprendre les processus organisationnels et améliorer les systèmes d'information.</p>
+            </div>
+            <img src="assets/pert.png" class="popup-image">
+            <div class="popup-text">
+                <p>Nous avons appris à formaliser les besoins du client et de l'utilisateur en rédigeant des spécifications claires et détaillées dans des cahiers des charges, facilitant ainsi la conception et le développement des projets.</p>
+            </div>
+            <img src="assets/epic_story.png" class="popup-image">
+            <div class="popup-text">
+                <p>Enfin, nous avons défini et appliqué des méthodes de suivi de projet, en assurant un contrôle régulier de l'avancement grâce à des outils adaptés pour garantir la réussite des différentes phases du projet.</p>
+            </div>
+            <img src="assets/trello.png" class="popup-image">
+            <div class="popup-text">
+                <p>Nous avons mené un projet en Agile Scrum, avec un Scrum Master et un Product Owner. En travaillant en sprints et en tenant des daily meetings, nous avons adapté notre développement aux besoins du projet de manière itérative.</p>
+            </div>
+            <img src="assets/gantt.png" class="popup-image">
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-6">
+        <div class="popup-content">
+            <a href="#bloc" class="popup-close">&times;</a>
+            <div class="popup-text">
+                <h3>Bloc 6 - Collaborer</h3>
+                <p>Lors des TD de management, nous avons découvert la structure et le fonctionnement des entreprises, notamment le rôle des DSI et ESN dans l'organisation informatique.</p>
+            </div>
+            <div class="popup-text">
+                <p>Durant les SAE, nous avons appris à travailler en équipe de façon efficace, en adoptant une démarche favorisant la collaboration et l'intégration dans un projet commun.</p>
+            </div>
+            <img src="assets/raci.png" alt="Epic Story" class="popup-image">
+            <div class="popup-text">
+                <p>Ces projets nous ont permis de développer nos compétences interpersonnelles, essentielles pour bien communiquer et collaborer au sein d'une équipe informatique.</p>
+            </div>
+            <div class="popup-text">
+                <p>Enfin, nous avons renforcé notre capacité à rendre compte de notre travail en rédigeant des comptes rendus d'activité (CRA), assurant un suivi clair de nos missions.</p>
+            </div>
+            <img src="assets/cra.png" alt="Compte Rendu d'Activité" class="popup-image">
+        </div>
+    </div>
+
+    <section id="projets">
+        <h2>Projets</h2>
+        <div class="projets-container">
+            <div class="projet-navigation">
+                <div class="projet-dots">
+                    <div class="dot active" data-projet="0"></div>
+                    <div class="dot" data-projet="1"></div>
+                    <div class="dot" data-projet="2"></div>
+                    <div class="dot" data-projet="3"></div>
+                    <div class="dot" data-projet="4"></div>
+                    <div class="dot" data-projet="5"></div>
+                </div>
+                <div class="projet-arrows">
+                    <button class="arrow prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="arrow next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="projets-wrapper">
+                <div class="projet active">
+                    <div class="projet-content">
+                        <div class="projet-image">
+                            <img src="assets/projet1.jpeg" alt="Projet 1">
+                        </div>
+                        <div class="projet-info">
+                            <div class="projet-title">
+                                <h3>TRAVIA</h3>
+                                <p>Across the Galaxy</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Description</h4>
+                                <p>Inspirée de l'univers de Star Wars, cette application aide les voyageurs galactiques à trouver le meilleur itinéraire en combinant différents moyens de transport spatiaux.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Équipe</h4>
+                                <p>Projet réalisé en équipe de 3 dans le cadre de la SAE 1 du BUT2 Informatique.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Compétences</h4>
+                                <div class="projet-technologies">
+                                    <div class="competence-icon">
+                                        <i class="fab fa-java"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fas fa-copyright"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fab fa-php"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projet-section">
+                                <a href="https://github.com/KhephrenDjelidi" target="_blank" class="projet-link">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet active">
+                    <div class="projet-content">
+                        <div class="projet-image">
+                            <img src="assets/projet2.png" alt="Projet 2">
+                        </div>
+                        <div class="projet-info">
+                            <div class="projet-title">
+                                <h3>WIKISPEED</h3>
+                                <p>Soit le plus rapide possible</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Description</h4>
+                                <p>Un jeu aussi bien solo que multijoueur, mélangeant le fun et le challenge, il faut être le plus rapide à parcourir les différents articles demandés.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Équipe</h4>
+                                <p>Projet réalisé en équipe de 4 dans le cadre de la SAE 3 du BUT2 Informatique.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Compétences</h4>
+                                <div class="projet-technologies">
+                                    <div class="competence-icon">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fab fa-node-js"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projet-section">
+                                <a href="https://github.com/KhephrenDjelidi" target="_blank" class="projet-link">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet active">
+                    <div class="projet-content">
+                        <div class="projet-image">
+                            <img src="assets/projet3.png" alt="Projet 3">
+                        </div>
+                        <div class="projet-info">
+                            <div class="projet-title">
+                                <h3>BANKAI</h3>
+                                <p>L'outil de gestion qu'il vous faut</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Description</h4>
+                                <p>Plateforme concue pour les entreprises afin de gérer leurs trésorerie, remises, et autres opérations bancaires. Elle est capable de générer des graphiques.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Équipe</h4>
+                                <p>Projet réalisé en équipe de 5 développeurs dans le cadre de l'apprentissage de la méthode agile scrum.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Compétences</h4>
+                                <div class="projet-technologies">
+                                    <div class="competence-icon">
+                                        <i class="fab fa-php"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fas fa-tasks"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projet-section">
+                                <a href="https://github.com/KhephrenDjelidi" target="_blank" class="projet-link">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet active">
+                    <div class="projet-content">
+                        <div class="projet-image">
+                            <img src="assets/projet4.png" alt="Projet 4">
+                        </div>
+                        <div class="projet-info">
+                            <div class="projet-title">
+                                <h3>HessNCF</h3>
+                                <p>Réservez votre billet à tout moment</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Description</h4>
+                                <p>Une application de reservation de billets de train, elle permet de rechercher des billets et de les réserver.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Équipe</h4>
+                                <p>Projet réalisé en équipe de 5 pour mettre en pratique notre apprentissage de la base de données mongoDB.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Compétences</h4>
+                                <div class="projet-technologies">
+                                    <div class="competence-icon">
+                                        <i class="fab fa-node-js"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fab fa-html5"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fab fa-css3-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projet-section">
+                                <a href="https://github.com/KhephrenDjelidi" target="_blank" class="projet-link">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet">
+                    <div class="projet-content">
+                        <div class="projet-image">
+                            <img src="assets/projet5.png" alt="Projet QIX">
+                        </div>
+                        <div class="projet-info">
+                            <div class="projet-title">
+                                <h3>QIX</h3>
+                                <p>Un jeu rétro revisité</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Description</h4>
+                                <p>Recréation du célèbre jeu QIX des années 80 en Python. Un projet qui a permis de développer nos compétences en programmation et en travail d'équipe.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Équipe</h4>
+                                <p>Projet réalisé en binôme mettant l'accent sur la collaboration et la gestion de projet.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Compétences</h4>
+                                <div class="projet-technologies">
+                                    <div class="competence-icon">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projet-section">
+                                <a href="https://github.com/KhephrenDjelidi" target="_blank" class="projet-link">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projet">
+                    <div class="projet-content">
+                        <div class="projet-image">
+                            <img src="assets/projet6.png" alt="Projet UNESCO">
+                        </div>
+                        <div class="projet-info">
+                            <div class="projet-title">
+                                <h3>UNESCO</h3>
+                                <p>Le patrimoine de la ville d'Alger</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Description</h4>
+                                <p>Application web en partenariat avec l'UNESCO, le but étant de mettre en avant la culture et le patrimoine culturel de la ville d'Alger pour les natifs et les touristes.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Équipe</h4>
+                                <p>Projet réalisé en équipe de 6 combinant gestion de projet, développement web et recherche de données.</p>
+                            </div>
+                            <div class="projet-section">
+                                <h4>Compétences</h4>
+                                <div class="projet-technologies">
+                                    <div class="competence-icon">
+                                        <i class="fab fa-php"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fab fa-html5"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fab fa-css3-alt"></i>
+                                    </div>
+                                    <div class="competence-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projet-section">
+                                <a href="https://github.com/KhephrenDjelidi" target="_blank" class="projet-link">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:khephdjelidi@email.com" class="footer-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/khephrendjelidi" target="_blank" class="footer-link" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/kamusubi" target="_blank" class="footer-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Khephren Djelidi. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<script src="js/parcours.js"></script>
+</body>
+
+</html>

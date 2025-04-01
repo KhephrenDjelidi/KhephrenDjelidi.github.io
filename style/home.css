@@ -1,0 +1,241 @@
+/* Section Home */
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    transform: translateY(-10vh);
+}
+
+.name-container {
+    position: relative;
+    z-index: 2;
+}
+
+.name-container h1 {
+    font-size: 6vw;
+    line-height: 1;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.name-container h1:first-child {
+    margin-bottom: 1vh;
+}
+
+.name-container h1:hover {
+    transform: translateX(20px);
+    color: #A6E3E9;
+}
+
+
+/* Formes d'arrière-plan */
+.background-shapes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.shape-1 {
+    width: 25vw;
+    height: 25vw;
+    background-color: rgba(181, 234, 215, 0.3);
+    top: -20%;
+    left: 10%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 20vw;
+    height: 20vw;
+    background-color: rgba(166, 227, 233, 0.3);
+    bottom: 15%;
+    right: 15%;
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+    width: 15vw;
+    height: 15vw;
+    background-color: rgba(181, 234, 215, 0.2);
+    top: 40%;
+    left: 20%;
+    animation: pulse 6s ease-in-out infinite;
+}
+
+.shape-4 {
+    width: 18vw;
+    height: 18vw;
+    background-color: rgba(242, 142, 142, 0.2);
+    top: 25%;
+    left: -50%;
+    animation: float 9s ease-in-out infinite;
+}
+
+.shape-5 {
+    width: 12vw;
+    height: 12vw;
+    background-color: rgba(255, 197, 138, 0.2);
+    bottom: 30%;
+    right: -10%;
+    animation: pulse 7s ease-in-out infinite;
+}
+
+.shape-6 {
+    width: 16vw;
+    height: 16vw;
+    background-color: rgba(240, 231, 129, 0.2);
+    top: 60%;
+    left: -15%;
+    animation: float 11s ease-in-out infinite reverse;
+}
+
+.shape-7 {
+    width: 14vw;
+    height: 14vw;
+    background-color: rgba(159, 240, 171, 0.2);
+    bottom: 20%;
+    right: -35%;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.shape-8 {
+    width: 16vw;
+    height: 16vw;
+    background-color: rgba(166, 179, 233, 0.2);
+    top: 15%;
+    right: -55%;
+    animation: float 12s ease-in-out infinite;
+}
+
+/* Indicateur de défilement */
+.scroll-indicator {
+    position: absolute;
+    bottom: -40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+.scroll-indicator span {
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    transform: rotate(45deg);
+    animation: scrollIndicator 2s infinite;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 20px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes scrollIndicator {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .name-container h1 {
+        font-size: 8vw;
+    }
+
+    .scroll-indicator {
+        bottom: -30vh;
+    }
+
+    .shape-1 { width: 30vw; height: 30vw; }
+    .shape-2 { width: 25vw; height: 25vw; }
+    .shape-3 { width: 20vw; height: 20vw; }
+    .shape-4, .shape-5, .shape-6, .shape-7, .shape-8 { display: none; }
+}
+
+@media screen and (max-width: 480px) {
+    .name-container h1 {
+        font-size: 11vw;
+    }
+    
+    .home-content {
+        transform: translateY(-5vh);
+    }
+
+    .scroll-indicator {
+        bottom: -30vh;
+        margin-top: 2vh;
+    }
+
+    .scroll-indicator span {
+        font-size: 14px;
+    }
+
+    .shape-1 { width: 40vw; height: 40vw; left: 0; }
+    .shape-2 { width: 35vw; height: 35vw; right: 0; }
+    .shape-3 { width: 30vw; height: 30vw; left: 10%; }
+} 
+
