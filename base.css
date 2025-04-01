@@ -1,0 +1,368 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Pangram Sans Rounded', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+section {
+    height: 100vh; 
+}
+
+main {
+    background-color: #F6F6F6; 
+    font-family: 'Pangram Sans Rounded', sans-serif;
+}
+
+@font-face {
+    font-family: 'Pangram Sans Rounded';
+    src: url('fonts/PPPangramSansRounded-Medium.otf') format('truetype');
+}
+
+/* Header */
+.main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 2rem 3rem;
+    animation: headerAppear 0.8s ease-out forwards;
+}
+
+.main-header nav ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.main-header nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.main-header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, rgba(181, 234, 215, 0.6), rgba(166, 227, 233, 0.3));
+    transition: width 0.3s ease;
+    animation: underlineLoop 2s ease-in-out infinite;
+}
+
+.main-header nav a:hover {
+    color: #A6E3E9;
+    transform: translateY(-2px);
+}
+
+.main-header nav a:hover::after {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-link:hover {
+    color: #A6E3E9;
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-link i {
+    font-size: 1.5rem;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes headerAppear {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes underlineLoop {
+    0% {
+        background: linear-gradient(135deg, rgba(181, 234, 215, 0.6), rgba(166, 227, 233, 0.3));
+    }
+    50% {
+        background: linear-gradient(135deg, rgba(166, 227, 233, 0.6), rgba(181, 234, 215, 0.3));
+    }
+    100% {
+        background: linear-gradient(135deg, rgba(181, 234, 215, 0.6), rgba(166, 227, 233, 0.3));
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .main-header {
+        padding: 1.5rem;
+    }
+
+    .main-header nav ul {
+        gap: 2rem;
+    }
+
+    .main-header nav a {
+        font-size: 17px;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+
+    .footer-link {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-header {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .main-header nav ul {
+        justify-content: space-around;
+        gap: 1rem;
+    }
+
+    .main-header nav a {
+        font-size: 16px;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        margin-top: 7rem;
+    }
+}
+
+/* Sélection de texte */
+::selection {
+    background-color: #A6E3E9;
+    color: #333;
+}
+
+::-moz-selection {
+    background-color: #A6E3E9;
+    color: #333;
+}
+
+/* Style global pour les titres de section */
+section h2 {
+    font-family: 'Pangram Sans Rounded', sans-serif;
+    font-size: 56px;
+    color: #333;
+    text-align: center;
+    margin: 0 auto 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: titleAppear 0.8s ease-out forwards;
+    transition: color 0.3s ease;
+    width: fit-content;
+    display: block;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, rgba(181, 234, 215, 0.6), rgba(166, 227, 233, 0.3));
+    transform: translateX(-50%);
+    border-radius: 2px;
+    animation: barPulse 7s ease-in-out infinite;
+}
+
+section h2:hover {
+    color: #A6E3E9;
+}
+
+/* Animations pour les titres */
+@keyframes titleAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation pour la barre qui pulse */
+@keyframes barPulse {
+    0% {
+        width: 60px;
+        background: linear-gradient(135deg, rgba(181, 234, 215, 0.6), rgba(166, 227, 233, 0.3));
+    }
+    50% {
+        width: 120px;
+        background: linear-gradient(135deg, rgba(181, 234, 215, 0.3), rgba(166, 227, 233, 0.6));
+    }
+    100% {
+        width: 60px;
+        background: linear-gradient(135deg, rgba(181, 234, 215, 0.6), rgba(166, 227, 233, 0.3));
+    }
+}
+
+/* Responsive pour les titres */
+@media screen and (max-width: 768px) {
+    section h2 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    section h2 {
+        font-size: 35px;
+    }
+}
+
+.icon-menu {
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+
+.icon-menu {
+    display: none;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    transition: right 0.3s ease;
+    padding-top: 60px;
+    z-index: 100;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.side-menu .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.side-menu.active {
+    right: 0;
+}
+
+@media screen and (max-width: 770px) {
+    .main-header {
+        display: none;
+    }
+    .icon-menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 771px) {
+    .icon-menu {
+        display: none !important;
+    }
+}
